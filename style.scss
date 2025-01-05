@@ -1,0 +1,49 @@
+.container {
+    width: 300px;
+    margin:20vh auto;
+    padding: 30px;
+    text-align: center;
+    background-color: gainsboro;
+    
+  }
+  h1 {
+    font-size: 30px;
+  }
+  form {
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    font-size: 20px;
+  }
+  input[type="number"] {
+    border-radius: 3px;
+    height: 20px;
+    border: 1px solid gray;
+  }
+  input[type="submit"] {
+    width: 50%;
+    margin: 0 auto;
+
+  }
+  .output {
+    margin-top: 15px;
+  }
+  .password-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .password-output {
+    flex: 1;
+    margin-right: 5px;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 3px;
+  }
+  #copyButton {
+    background-color: rgb(6, 143, 255);
+    border: none;
+    padding: 10px;
+    color: white;
+     
+  }
