@@ -8,6 +8,36 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="container">
+        <header>
+          <h1>Password Generator</h1>
+        </header>
+        <form id="pswForm">      
+          <div>
+            <label for="number">Password Length:</label>
+            <input type="number" name="number" id="number" min="1" max="30" placeholder="1-30" required>
+          </div>
+          <div class="checkbox">
+            <label for="uppercase">Include Uppercase Letters:</label>
+            <input type="checkbox" id="uppercase" name="uppercase" />
+          </div>
+          <div class="checkbox">
+            <label for="numbers">Include Numbers:</label>
+            <input type="checkbox" id="numbers" name="numbers" />
+          </div>
+          <div class="checkbox">
+            <label for="symbols">Include Symbols:</label>
+            <input type="checkbox" id="symbols" name="symbols" />
+          </div>
+          
+          <input type="submit" value="Generate Password"></input>
+        </form>
+        <div class="output">
+          <div class="password-box">
+            <input type="text" id="passwordOutput" class="password-output" readonly placeholder="Your password will appear here" />
+            <button id="copyButton">Copy</button>
+        </div>
+    </div>
     
 </body>
 </html>
