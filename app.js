@@ -44,11 +44,8 @@ form.addEventListener('submit', (event) => {
   const password = generatePassword(length, includeUppercase, includeNumbers, includeSymbols);
   passwordOutput.value = password;
 });
-
+//event liseneris mygtukui
 copyButton.addEventListener('click', () => {
-  if (passwordOutput.value) {
-    passwordOutput.select();
-    document.execCommand('copy');
-    alert('Password copied to clipboard!');
-  }
+  const password = passwordOutput.value;
+  navigator.clipboard.writeText(password);
 });

@@ -28,12 +28,12 @@
   .output {
     margin-top: 15px;
   }
-  .password-box {
+  .box {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  .password-output {
+  #passwordOutput {
     flex: 1;
     margin-right: 5px;
     padding: 5px;
