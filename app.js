@@ -17,15 +17,15 @@ const generatePassword = (length, Uppercase, Numbers, Symbols) => {
   const numbers = '0123456789';
   const symbols = '!@#$%^&*()_+[]{}|;:,.<>?';
 
-  let container = lowerCase; //visi simboliai tik mazosios raides
-  if (Uppercase) container += upperCase;// prideda pazymejus didziasias raides
-  if (Numbers) container += numbers;// prideda pazymejus sk.
-  if (Symbols) container += symbols;// prideda pazymejus simbolius
+  let container = lowerCase;
+  if (Uppercase) container += upperCase;
+  if (Numbers) container += numbers;
+  if (Symbols) container += symbols;
 
   if (container.length === 0) return 'Please select at least one option.';
 
-  //sugeneruojamas slaptazodis is atsitiktiniu simboliu ir raidziu
-  let password = '';//tarkim slaptazodis tuscias stringas
+  
+  let password = '';
   for (let i = 0; i < length; i++) {
     const randomIndex = Math.floor(Math.random() * container.length);
     password += container[randomIndex];
@@ -44,7 +44,7 @@ form.addEventListener('submit', (event) => {
   const password = generatePassword(length, Uppercase, Numbers, Symbols);
   passwordOutput.value = password;
 });
-//event liseneris mygtukui nusikopijuoti slaptazodi vienu paspaudimu
+
 copyButton.addEventListener('click', () => {
   const password = passwordOutput.value;
   navigator.clipboard.writeText(password);
